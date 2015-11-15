@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CDEF0BD20BD010630F57ADE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BDAC3B5031ED229000284E /* libPods.a */; };
 		FE1164F81BF847CF00094591 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1164F71BF847CF00094591 /* main.m */; };
 		FE1164FB1BF847CF00094591 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1164FA1BF847CF00094591 /* AppDelegate.m */; };
 		FE1164FE1BF847CF00094591 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1164FD1BF847CF00094591 /* ViewController.m */; };
@@ -15,6 +16,19 @@
 		FE1165061BF847D000094591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1165041BF847D000094591 /* LaunchScreen.storyboard */; };
 		FE1165111BF847D000094591 /* PrettyGirlsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165101BF847D000094591 /* PrettyGirlsTests.m */; };
 		FE11651C1BF847D000094591 /* PrettyGirlsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11651B1BF847D000094591 /* PrettyGirlsUITests.m */; };
+		FE1165501BF84C4500094591 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165331BF84C4500094591 /* Global.m */; };
+		FE1165511BF84C4500094591 /* WdCleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165351BF84C4500094591 /* WdCleanCaches.m */; };
+		FE1165521BF84C4500094591 /* HUDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165381BF84C4500094591 /* HUDTools.m */; };
+		FE1165531BF84C4500094591 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11653A1BF84C4500094591 /* RIButtonItem.m */; };
+		FE1165541BF84C4500094591 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE11653B1BF84C4500094591 /* SVProgressHUD.bundle */; };
+		FE1165551BF84C4500094591 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11653D1BF84C4500094591 /* SVProgressHUD.m */; };
+		FE1165561BF84C4500094591 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11653F1BF84C4500094591 /* UIAlertView+Blocks.m */; };
+		FE1165571BF84C4500094591 /* MLPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165421BF84C4500094591 /* MLPictureBrowser.m */; };
+		FE1165581BF84C4500094591 /* MLPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165451BF84C4500094591 /* MLPicture.m */; };
+		FE1165591BF84C4500094591 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165481BF84C4500094591 /* UIImage+Tint.m */; };
+		FE11655A1BF84C4500094591 /* MLBroadcastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11654B1BF84C4500094591 /* MLBroadcastView.m */; };
+		FE11655B1BF84C4500094591 /* MLBroadcastViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11654D1BF84C4500094591 /* MLBroadcastViewCell.m */; };
+		FE11655C1BF84C4500094591 /* MLPictureBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11654F1BF84C4500094591 /* MLPictureBrowserCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1BDAC3B5031ED229000284E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7D08A43B30EABE8B1F67FFB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F23352AA49969FED70C576C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE1164F31BF847CF00094591 /* PrettyGirls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyGirls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1164F71BF847CF00094591 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE1164F91BF847CF00094591 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +68,32 @@
 		FE1165171BF847D000094591 /* PrettyGirlsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrettyGirlsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE11651B1BF847D000094591 /* PrettyGirlsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrettyGirlsUITests.m; sourceTree = "<group>"; };
 		FE11651D1BF847D000094591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE1165321BF84C4500094591 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		FE1165331BF84C4500094591 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		FE1165341BF84C4500094591 /* WdCleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WdCleanCaches.h; sourceTree = "<group>"; };
+		FE1165351BF84C4500094591 /* WdCleanCaches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WdCleanCaches.m; sourceTree = "<group>"; };
+		FE1165371BF84C4500094591 /* HUDTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDTools.h; sourceTree = "<group>"; };
+		FE1165381BF84C4500094591 /* HUDTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDTools.m; sourceTree = "<group>"; };
+		FE1165391BF84C4500094591 /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
+		FE11653A1BF84C4500094591 /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
+		FE11653B1BF84C4500094591 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		FE11653C1BF84C4500094591 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		FE11653D1BF84C4500094591 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		FE11653E1BF84C4500094591 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		FE11653F1BF84C4500094591 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		FE1165411BF84C4500094591 /* MLPictureBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPictureBrowser.h; sourceTree = "<group>"; };
+		FE1165421BF84C4500094591 /* MLPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPictureBrowser.m; sourceTree = "<group>"; };
+		FE1165441BF84C4500094591 /* MLPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPicture.h; sourceTree = "<group>"; };
+		FE1165451BF84C4500094591 /* MLPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPicture.m; sourceTree = "<group>"; };
+		FE1165471BF84C4500094591 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		FE1165481BF84C4500094591 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		FE11654A1BF84C4500094591 /* MLBroadcastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBroadcastView.h; sourceTree = "<group>"; };
+		FE11654B1BF84C4500094591 /* MLBroadcastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBroadcastView.m; sourceTree = "<group>"; };
+		FE11654C1BF84C4500094591 /* MLBroadcastViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBroadcastViewCell.h; sourceTree = "<group>"; };
+		FE11654D1BF84C4500094591 /* MLBroadcastViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBroadcastViewCell.m; sourceTree = "<group>"; };
+		FE11654E1BF84C4500094591 /* MLPictureBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPictureBrowserCell.h; sourceTree = "<group>"; };
+		FE11654F1BF84C4500094591 /* MLPictureBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPictureBrowserCell.m; sourceTree = "<group>"; };
+		FE11655D1BF84C5E00094591 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CDEF0BD20BD010630F57ADE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +122,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E177565FEE4A80A48F34FCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F23352AA49969FED70C576C2 /* Pods.debug.xcconfig */,
+				E7D08A43B30EABE8B1F67FFB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4F743AB25A11A352A2AD5F26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1BDAC3B5031ED229000284E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE1164EA1BF847CF00094591 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +146,8 @@
 				FE11650F1BF847D000094591 /* PrettyGirlsTests */,
 				FE11651A1BF847D000094591 /* PrettyGirlsUITests */,
 				FE1164F41BF847CF00094591 /* Products */,
+				2E177565FEE4A80A48F34FCF /* Pods */,
+				4F743AB25A11A352A2AD5F26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +164,14 @@
 		FE1164F51BF847CF00094591 /* PrettyGirls */ = {
 			isa = PBXGroup;
 			children = (
+				FE11655D1BF84C5E00094591 /* PrefixHeader.pch */,
 				FE1164F91BF847CF00094591 /* AppDelegate.h */,
 				FE1164FA1BF847CF00094591 /* AppDelegate.m */,
-				FE1164FC1BF847CF00094591 /* ViewController.h */,
-				FE1164FD1BF847CF00094591 /* ViewController.m */,
 				FE1164FF1BF847CF00094591 /* Main.storyboard */,
 				FE1165021BF847D000094591 /* Assets.xcassets */,
-				FE1165041BF847D000094591 /* LaunchScreen.storyboard */,
-				FE1165071BF847D000094591 /* Info.plist */,
+				FE1165291BF84C4500094591 /* Class */,
+				FE1164FC1BF847CF00094591 /* ViewController.h */,
+				FE1164FD1BF847CF00094591 /* ViewController.m */,
 				FE1164F61BF847CF00094591 /* Supporting Files */,
 			);
 			path = PrettyGirls;
@@ -117,6 +180,8 @@
 		FE1164F61BF847CF00094591 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE1165041BF847D000094591 /* LaunchScreen.storyboard */,
+				FE1165071BF847D000094591 /* Info.plist */,
 				FE1164F71BF847CF00094591 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,6 +205,142 @@
 			path = PrettyGirlsUITests;
 			sourceTree = "<group>";
 		};
+		FE1165291BF84C4500094591 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				FE11652E1BF84C4500094591 /* Other */,
+				FE11652A1BF84C4500094591 /* Main */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		FE11652A1BF84C4500094591 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FE11652B1BF84C4500094591 /* Controller */,
+				FE11652C1BF84C4500094591 /* Model */,
+				FE11652D1BF84C4500094591 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FE11652B1BF84C4500094591 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE11652C1BF84C4500094591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE11652D1BF84C4500094591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE11652E1BF84C4500094591 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FE11652F1BF84C4500094591 /* Category */,
+				FE1165301BF84C4500094591 /* lib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FE11652F1BF84C4500094591 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FE1165301BF84C4500094591 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165311BF84C4500094591 /* ClearCache */,
+				FE1165361BF84C4500094591 /* HUD */,
+				FE1165401BF84C4500094591 /* MLPictureBroswer */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		FE1165311BF84C4500094591 /* ClearCache */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165321BF84C4500094591 /* Global.h */,
+				FE1165331BF84C4500094591 /* Global.m */,
+				FE1165341BF84C4500094591 /* WdCleanCaches.h */,
+				FE1165351BF84C4500094591 /* WdCleanCaches.m */,
+			);
+			path = ClearCache;
+			sourceTree = "<group>";
+		};
+		FE1165361BF84C4500094591 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165371BF84C4500094591 /* HUDTools.h */,
+				FE1165381BF84C4500094591 /* HUDTools.m */,
+				FE1165391BF84C4500094591 /* RIButtonItem.h */,
+				FE11653A1BF84C4500094591 /* RIButtonItem.m */,
+				FE11653B1BF84C4500094591 /* SVProgressHUD.bundle */,
+				FE11653C1BF84C4500094591 /* SVProgressHUD.h */,
+				FE11653D1BF84C4500094591 /* SVProgressHUD.m */,
+				FE11653E1BF84C4500094591 /* UIAlertView+Blocks.h */,
+				FE11653F1BF84C4500094591 /* UIAlertView+Blocks.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		FE1165401BF84C4500094591 /* MLPictureBroswer */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165411BF84C4500094591 /* MLPictureBrowser.h */,
+				FE1165421BF84C4500094591 /* MLPictureBrowser.m */,
+				FE1165431BF84C4500094591 /* Model */,
+				FE1165461BF84C4500094591 /* Other */,
+				FE1165491BF84C4500094591 /* View */,
+			);
+			path = MLPictureBroswer;
+			sourceTree = "<group>";
+		};
+		FE1165431BF84C4500094591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165441BF84C4500094591 /* MLPicture.h */,
+				FE1165451BF84C4500094591 /* MLPicture.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE1165461BF84C4500094591 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165471BF84C4500094591 /* UIImage+Tint.h */,
+				FE1165481BF84C4500094591 /* UIImage+Tint.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FE1165491BF84C4500094591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE11654A1BF84C4500094591 /* MLBroadcastView.h */,
+				FE11654B1BF84C4500094591 /* MLBroadcastView.m */,
+				FE11654C1BF84C4500094591 /* MLBroadcastViewCell.h */,
+				FE11654D1BF84C4500094591 /* MLBroadcastViewCell.m */,
+				FE11654E1BF84C4500094591 /* MLPictureBrowserCell.h */,
+				FE11654F1BF84C4500094591 /* MLPictureBrowserCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE1165201BF847D000094591 /* Build configuration list for PBXNativeTarget "PrettyGirls" */;
 			buildPhases = (
+				B6467F816D6285D92A170A16 /* Check Pods Manifest.lock */,
 				FE1164EF1BF847CF00094591 /* Sources */,
 				FE1164F01BF847CF00094591 /* Frameworks */,
 				FE1164F11BF847CF00094591 /* Resources */,
+				7A6408241D2FB217DE0D9ADB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +449,7 @@
 				FE1165061BF847D000094591 /* LaunchScreen.storyboard in Resources */,
 				FE1165031BF847D000094591 /* Assets.xcassets in Resources */,
 				FE1165011BF847CF00094591 /* Main.storyboard in Resources */,
+				FE1165541BF84C4500094591 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +469,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A6408241D2FB217DE0D9ADB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6467F816D6285D92A170A16 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE1164EF1BF847CF00094591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1165591BF84C4500094591 /* UIImage+Tint.m in Sources */,
+				FE1165501BF84C4500094591 /* Global.m in Sources */,
+				FE1165551BF84C4500094591 /* SVProgressHUD.m in Sources */,
+				FE1165571BF84C4500094591 /* MLPictureBrowser.m in Sources */,
+				FE11655C1BF84C4500094591 /* MLPictureBrowserCell.m in Sources */,
 				FE1164FE1BF847CF00094591 /* ViewController.m in Sources */,
+				FE11655B1BF84C4500094591 /* MLBroadcastViewCell.m in Sources */,
+				FE1165561BF84C4500094591 /* UIAlertView+Blocks.m in Sources */,
 				FE1164FB1BF847CF00094591 /* AppDelegate.m in Sources */,
+				FE1165531BF84C4500094591 /* RIButtonItem.m in Sources */,
+				FE1165511BF84C4500094591 /* WdCleanCaches.m in Sources */,
 				FE1164F81BF847CF00094591 /* main.m in Sources */,
+				FE11655A1BF84C4500094591 /* MLBroadcastView.m in Sources */,
+				FE1165521BF84C4500094591 /* HUDTools.m in Sources */,
+				FE1165581BF84C4500094591 /* MLPicture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,9 +660,12 @@
 		};
 		FE1165211BF847D000094591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F23352AA49969FED70C576C2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrettyGirls/PrefixHeader.pch";
 				INFOPLIST_FILE = PrettyGirls/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.PrettyGirls.PrettyGirls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +674,12 @@
 		};
 		FE1165221BF847D000094591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D08A43B30EABE8B1F67FFB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrettyGirls/PrefixHeader.pch";
 				INFOPLIST_FILE = PrettyGirls/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.PrettyGirls.PrettyGirls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +753,7 @@
 				FE1165221BF847D000094591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE1165231BF847D000094591 /* Build configuration list for PBXNativeTarget "PrettyGirlsTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +762,7 @@
 				FE1165251BF847D000094591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE1165261BF847D000094591 /* Build configuration list for PBXNativeTarget "PrettyGirlsUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +771,7 @@
 				FE1165281BF847D000094591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
