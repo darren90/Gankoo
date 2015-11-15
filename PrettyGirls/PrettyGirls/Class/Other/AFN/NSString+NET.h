@@ -11,6 +11,6 @@
 @interface NSString (NET)
 
 
-+(NSString *)getHttpUrlWithPort:(NSString *)port;
++(NSString *)getUrlWithPort:(NSString *)port;
 //+ (NSString*)deviceString;
 @end

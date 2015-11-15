@@ -35,6 +35,8 @@
 		FE11657A1BF85F6100094591 /* WaterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165781BF85F6100094591 /* WaterCell.m */; };
 		FE11657B1BF85F6100094591 /* WaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1165791BF85F6100094591 /* WaterCell.xib */; };
 		FE11657E1BF8609B00094591 /* WaterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11657D1BF8609B00094591 /* WaterModel.m */; };
+		FE1165811BF8670400094591 /* TFPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165801BF8670400094591 /* TFPictureBrowser.m */; };
+		FE1165831BF868D600094591 /* MLPictureBroswer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE1165821BF868D600094591 /* MLPictureBroswer.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,9 @@
 		FE1165791BF85F6100094591 /* WaterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterCell.xib; sourceTree = "<group>"; };
 		FE11657C1BF8609B00094591 /* WaterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterModel.h; sourceTree = "<group>"; };
 		FE11657D1BF8609B00094591 /* WaterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterModel.m; sourceTree = "<group>"; };
+		FE11657F1BF8670400094591 /* TFPictureBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPictureBrowser.h; sourceTree = "<group>"; };
+		FE1165801BF8670400094591 /* TFPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPictureBrowser.m; sourceTree = "<group>"; };
+		FE1165821BF868D600094591 /* MLPictureBroswer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MLPictureBroswer.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +325,8 @@
 		FE1165401BF84C4500094591 /* MLPictureBroswer */ = {
 			isa = PBXGroup;
 			children = (
+				FE11657F1BF8670400094591 /* TFPictureBrowser.h */,
+				FE1165801BF8670400094591 /* TFPictureBrowser.m */,
 				FE1165411BF84C4500094591 /* MLPictureBrowser.h */,
 				FE1165421BF84C4500094591 /* MLPictureBrowser.m */,
 				FE1165431BF84C4500094591 /* Model */,
@@ -341,6 +348,7 @@
 		FE1165461BF84C4500094591 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				FE1165821BF868D600094591 /* MLPictureBroswer.bundle */,
 				FE1165471BF84C4500094591 /* UIImage+Tint.h */,
 				FE1165481BF84C4500094591 /* UIImage+Tint.m */,
 			);
@@ -583,6 +591,7 @@
 				FE1165031BF847D000094591 /* Assets.xcassets in Resources */,
 				FE11657B1BF85F6100094591 /* WaterCell.xib in Resources */,
 				FE1165011BF847CF00094591 /* Main.storyboard in Resources */,
+				FE1165831BF868D600094591 /* MLPictureBroswer.bundle in Resources */,
 				FE1165541BF84C4500094591 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +670,7 @@
 				FE1165521BF84C4500094591 /* HUDTools.m in Sources */,
 				FE11657A1BF85F6100094591 /* WaterCell.m in Sources */,
 				FE1165581BF84C4500094591 /* MLPicture.m in Sources */,
+				FE1165811BF8670400094591 /* TFPictureBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

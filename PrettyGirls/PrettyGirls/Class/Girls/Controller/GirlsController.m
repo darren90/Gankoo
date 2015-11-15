@@ -28,12 +28,11 @@ static NSString *const IDENTTFIER = @"waterFlow";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
   
     UIGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(scrollToTop)];
     [self.navigationController.navigationBar addGestureRecognizer:tap];
     
-    CGRect rect = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64 - 49);//减去顶部NavBar64，底部TabBar49
+    CGRect rect = CGRectMake(0, 0, KViewW, KViewH);//减去顶部NavBar64，底部TabBar49
     UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
     UICollectionView * waterView = [[UICollectionView alloc]initWithFrame:rect collectionViewLayout:flowLayout];
     [waterView registerNib:[UINib nibWithNibName:@"WaterCell" bundle:nil] forCellWithReuseIdentifier:IDENTTFIER];
@@ -44,9 +43,9 @@ static NSString *const IDENTTFIER = @"waterFlow";
     waterView.dataSource = self;
     self.waterView = waterView;
     
-    float ratio = 1.3 ;//宽高比 420.0
+    float ratio = 1.2;
     int imgW = (ScreenW - 2*(10+7)) / 3;
-    int imgH = ratio * imgW + 47;
+    int imgH = ratio * imgW + 26;
     
     flowLayout.itemSize = CGSizeMake(imgW, imgH);
     flowLayout.minimumLineSpacing = 10;// =70/3
@@ -85,25 +84,23 @@ static NSString *const IDENTTFIER = @"waterFlow";
 - (void)requestData
 {
     __weak __typeof (self)weakSelf = self;
-    //[NSString getHttpUrlWithPort:KInter_Home]
-    //http://gank.avosapps.com/api/data/%E7%A6%8F%E5%88%A9/10/1
-    [AFNTool getWithURL:@"http://gank.avosapps.com/api/data/%E7%A6%8F%E5%88%A9/10/1" params:nil success:^(id json) {
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%d",[NSString getUrlWithPort:KInter_Girls],KRowPage,self.page];
+    
+    [AFNTool getWithURL:url params:nil success:^(id json) {
+        [weakSelf stopFresh];
         NSArray *array = [WaterModel mj_objectArrayWithKeyValuesArray:json[@"results"]];
-        [self.dataArray addObjectsFromArray:array];
-        [self.waterView reloadData];
+        [weakSelf.dataArray addObjectsFromArray:array];
+        [weakSelf.waterView reloadData];
     } failure:^(NSError *error) {
-        
+        [weakSelf stopFresh];
     }];
     
 }
 
 - (void)stopFresh
 {
-    [self.waterView.footer endRefreshing];
-    [self.waterView.header endRefreshing];
-    //self.waterView.header.hidden = YES;
-    self.waterView.footer.hidden = YES;
- 
+    [self.waterView.mj_footer endRefreshing];
+    [self.waterView.mj_header endRefreshing];
 }
 
 - (void)getSuccessData:(id)json
@@ -131,7 +128,12 @@ static NSString *const IDENTTFIER = @"waterFlow";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
- 
+    TFPictureBrowser *browser = [[TFPictureBrowser alloc]init];
+    NSMutableArray *pics = [NSMutableArray array];
+    for (WaterModel *model in self.dataArray) {
+        [pics addObject:model.url];
+    }
+    [browser showWithPictureURLs:pics atIndex:indexPath.item];
 }
 
 

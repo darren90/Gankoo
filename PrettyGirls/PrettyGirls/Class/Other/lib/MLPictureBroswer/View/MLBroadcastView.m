@@ -475,15 +475,9 @@
         self.currentIndex = 0;
     }
     
-//    _ps(self.scrollView.contentSize);
     [self setNeedsLayout];
     [self layoutIfNeeded];
-    
-//    _ps(self.scrollView.contentSize);
-    
     [self scrollToIndex:self.currentIndex animated:NO];
-    
-//    _ps(self.scrollView.contentSize);
 }
 
 @end

@@ -12,10 +12,9 @@
 @implementation NSString (NET)
 
 
-
-+(NSString *)getHttpUrlWithPort:(NSString *)port
++(NSString *)getUrlWithPort:(NSString *)port
 {
-    return [NSString stringWithFormat:@"%@/%@",KURLPrefix,port];
+    return [NSString stringWithFormat:@"%@/%@/%@",KURLPrefix,@"data",port];
 }
 + (NSString*)deviceString
 {

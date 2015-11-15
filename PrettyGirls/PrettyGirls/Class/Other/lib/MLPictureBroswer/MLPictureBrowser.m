@@ -51,9 +51,7 @@
     [self.view addSubview:self.mainView];
     [self.view addSubview:self.overlayView];
     
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
-    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -438,14 +436,6 @@
         return [self.delegate customOverlayViewOfMLPictureCell:pictureCell ofIndex:index];
     }
     return nil;
-    //测试数据
-    //    UILabel *label = [[UILabel alloc]init];
-    //    label.backgroundColor = [UIColor yellowColor];
-    //    label.layer.opacity = .45f;
-    //    label.textAlignment = NSTextAlignmentCenter;
-    //    label.font = [UIFont systemFontOfSize:14.0f];
-    //    label.text = [NSString stringWithFormat:@"第%u页",index];
-    //    return label;
 }
 
 //自定义覆盖View的frame
@@ -455,8 +445,6 @@
         return [self.delegate customOverlayViewFrameOfMLPictureCell:pictureCell ofIndex:index];
     }
     return CGRectZero;
-    //测试数据
-    //    return CGRectMake(0, 0, pictureCell.bounds.size.width, 50);
 }
 
 #pragma mark - rotate 这里限制住旋转，旋转在上面监控OBServer里有处理

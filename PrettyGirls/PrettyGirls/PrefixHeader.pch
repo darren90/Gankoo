@@ -20,11 +20,18 @@
 #import "MJExtension.h"
 #import "AFNTool.h"
 #import <AFNetworkReachabilityManager.h>//网络状态
+#import "MLPictureBrowser.h"
+#import "TFPictureBrowser.h"
 
 
 // MainScreen Height&Width
 #define ScreenH      [[UIScreen mainScreen] bounds].size.height
 #define ScreenW       [[UIScreen mainScreen] bounds].size.width
+#define KViewW       self.view.frame.size.width
+#define KViewH       self.view.frame.size.height
+
+
+#define PlaceholderImg [UIImage imageNamed:@"nopic_190x210"]  //占位图
 
 // 1.判断是否为iOS7
 #define IsIOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
@@ -59,13 +66,16 @@
 
 
 /**********************************网络访问**************************************/
-#define ROWPAGE                    @"10"//每页多少行
+#define KRowPage                    @"15"//每页多少行
 
 //网络访问前缀 KURLPrefix访问地址
-#define KURLPrefix                          @"http://api.rrmj.tv"
+#define KURLPrefix                          @"http://gank.avosapps.com/api"
 
 
 //首页
+#define KInter_Girls                        @"%E7%A6%8F%E5%88%A9"//福利
+
+
 #define KInter_Home                         @"video/index"//首页
 #define KInter_Detail                       @"video/details"//详情
 #define KInter_Lasterst                     @"video/lastest"//最近更新
