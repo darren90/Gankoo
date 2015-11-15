@@ -1,5 +1,5 @@
 //
-//  WaterModel.h
+//  MainModel.h
 //  PrettyGirls
 //
 //  Created by Tengfei on 15/11/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WaterModel : NSObject
+@interface MainModel : NSObject
 /***
 
  who: "张涵宇",

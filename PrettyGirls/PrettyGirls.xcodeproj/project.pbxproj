@@ -34,9 +34,14 @@
 		FE1165761BF85DEE00094591 /* GirlsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165751BF85DEE00094591 /* GirlsController.m */; };
 		FE11657A1BF85F6100094591 /* WaterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165781BF85F6100094591 /* WaterCell.m */; };
 		FE11657B1BF85F6100094591 /* WaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1165791BF85F6100094591 /* WaterCell.xib */; };
-		FE11657E1BF8609B00094591 /* WaterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11657D1BF8609B00094591 /* WaterModel.m */; };
+		FE11657E1BF8609B00094591 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11657D1BF8609B00094591 /* MainModel.m */; };
 		FE1165811BF8670400094591 /* TFPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165801BF8670400094591 /* TFPictureBrowser.m */; };
 		FE1165831BF868D600094591 /* MLPictureBroswer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE1165821BF868D600094591 /* MLPictureBroswer.bundle */; };
+		FE1165861BF8806F00094591 /* GankController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165851BF8806F00094591 /* GankController.m */; };
+		FE11658A1BF8828700094591 /* GankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165881BF8828700094591 /* GankCell.m */; };
+		FE11658B1BF8828700094591 /* GankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1165891BF8828700094591 /* GankCell.xib */; };
+		FE11658E1BF8872200094591 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11658D1BF8872200094591 /* NSDate+Category.m */; };
+		FE1165911BF88B5200094591 /* GankDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165901BF88B5200094591 /* GankDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,11 +116,20 @@
 		FE1165771BF85F6100094591 /* WaterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterCell.h; sourceTree = "<group>"; };
 		FE1165781BF85F6100094591 /* WaterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterCell.m; sourceTree = "<group>"; };
 		FE1165791BF85F6100094591 /* WaterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterCell.xib; sourceTree = "<group>"; };
-		FE11657C1BF8609B00094591 /* WaterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterModel.h; sourceTree = "<group>"; };
-		FE11657D1BF8609B00094591 /* WaterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterModel.m; sourceTree = "<group>"; };
+		FE11657C1BF8609B00094591 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		FE11657D1BF8609B00094591 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		FE11657F1BF8670400094591 /* TFPictureBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPictureBrowser.h; sourceTree = "<group>"; };
 		FE1165801BF8670400094591 /* TFPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPictureBrowser.m; sourceTree = "<group>"; };
 		FE1165821BF868D600094591 /* MLPictureBroswer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MLPictureBroswer.bundle; sourceTree = "<group>"; };
+		FE1165841BF8806F00094591 /* GankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GankController.h; sourceTree = "<group>"; };
+		FE1165851BF8806F00094591 /* GankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GankController.m; sourceTree = "<group>"; };
+		FE1165871BF8828700094591 /* GankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GankCell.h; sourceTree = "<group>"; };
+		FE1165881BF8828700094591 /* GankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GankCell.m; sourceTree = "<group>"; };
+		FE1165891BF8828700094591 /* GankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GankCell.xib; sourceTree = "<group>"; };
+		FE11658C1BF8872200094591 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
+		FE11658D1BF8872200094591 /* NSDate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
+		FE11658F1BF88B5200094591 /* GankDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GankDetailController.h; sourceTree = "<group>"; };
+		FE1165901BF88B5200094591 /* GankDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GankDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +295,8 @@
 		FE11652F1BF84C4500094591 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FE11658C1BF8872200094591 /* NSDate+Category.h */,
+				FE11658D1BF8872200094591 /* NSDate+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -395,6 +411,10 @@
 		FE1165691BF85D6D00094591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE1165841BF8806F00094591 /* GankController.h */,
+				FE1165851BF8806F00094591 /* GankController.m */,
+				FE11658F1BF88B5200094591 /* GankDetailController.h */,
+				FE1165901BF88B5200094591 /* GankDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -409,6 +429,9 @@
 		FE11656B1BF85D6D00094591 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE1165871BF8828700094591 /* GankCell.h */,
+				FE1165881BF8828700094591 /* GankCell.m */,
+				FE1165891BF8828700094591 /* GankCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,8 +458,8 @@
 		FE11656E1BF85D6D00094591 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FE11657C1BF8609B00094591 /* WaterModel.h */,
-				FE11657D1BF8609B00094591 /* WaterModel.m */,
+				FE11657C1BF8609B00094591 /* MainModel.h */,
+				FE11657D1BF8609B00094591 /* MainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -587,6 +610,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE11658B1BF8828700094591 /* GankCell.xib in Resources */,
 				FE1165061BF847D000094591 /* LaunchScreen.storyboard in Resources */,
 				FE1165031BF847D000094591 /* Assets.xcassets in Resources */,
 				FE11657B1BF85F6100094591 /* WaterCell.xib in Resources */,
@@ -656,18 +680,22 @@
 				FE1165501BF84C4500094591 /* Global.m in Sources */,
 				FE1165551BF84C4500094591 /* SVProgressHUD.m in Sources */,
 				FE1165571BF84C4500094591 /* MLPictureBrowser.m in Sources */,
+				FE1165861BF8806F00094591 /* GankController.m in Sources */,
 				FE1165671BF85A7400094591 /* NSString+NET.m in Sources */,
 				FE11655C1BF84C4500094591 /* MLPictureBrowserCell.m in Sources */,
+				FE11658A1BF8828700094591 /* GankCell.m in Sources */,
 				FE11655B1BF84C4500094591 /* MLBroadcastViewCell.m in Sources */,
 				FE1165561BF84C4500094591 /* UIAlertView+Blocks.m in Sources */,
 				FE1164FB1BF847CF00094591 /* AppDelegate.m in Sources */,
-				FE11657E1BF8609B00094591 /* WaterModel.m in Sources */,
+				FE11657E1BF8609B00094591 /* MainModel.m in Sources */,
 				FE1165531BF84C4500094591 /* RIButtonItem.m in Sources */,
 				FE1165511BF84C4500094591 /* WdCleanCaches.m in Sources */,
 				FE1164F81BF847CF00094591 /* main.m in Sources */,
 				FE1165661BF85A7400094591 /* AFNTool.m in Sources */,
+				FE1165911BF88B5200094591 /* GankDetailController.m in Sources */,
 				FE11655A1BF84C4500094591 /* MLBroadcastView.m in Sources */,
 				FE1165521BF84C4500094591 /* HUDTools.m in Sources */,
+				FE11658E1BF8872200094591 /* NSDate+Category.m in Sources */,
 				FE11657A1BF85F6100094591 /* WaterCell.m in Sources */,
 				FE1165581BF84C4500094591 /* MLPicture.m in Sources */,
 				FE1165811BF8670400094591 /* TFPictureBrowser.m in Sources */,

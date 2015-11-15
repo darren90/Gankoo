@@ -8,7 +8,7 @@
 
 #import "GirlsController.h"
 #import "WaterCell.h"
-#import "WaterModel.h"
+#import "MainModel.h"
 
 @interface GirlsController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)NSMutableArray * dataArray;
@@ -54,8 +54,6 @@ static NSString *const IDENTTFIER = @"waterFlow";
     flowLayout.sectionInset = UIEdgeInsetsMake(40/3, 10, 0, 10);
     
     self.page = 1;
-    
-   
     //第一次请求
     [self requestData];
     
@@ -88,7 +86,7 @@ static NSString *const IDENTTFIER = @"waterFlow";
     
     [AFNTool getWithURL:url params:nil success:^(id json) {
         [weakSelf stopFresh];
-        NSArray *array = [WaterModel mj_objectArrayWithKeyValuesArray:json[@"results"]];
+        NSArray *array = [MainModel mj_objectArrayWithKeyValuesArray:json[@"results"]];
         [weakSelf.dataArray addObjectsFromArray:array];
         [weakSelf.waterView reloadData];
     } failure:^(NSError *error) {
@@ -130,7 +128,7 @@ static NSString *const IDENTTFIER = @"waterFlow";
 {
     TFPictureBrowser *browser = [[TFPictureBrowser alloc]init];
     NSMutableArray *pics = [NSMutableArray array];
-    for (WaterModel *model in self.dataArray) {
+    for (MainModel *model in self.dataArray) {
         [pics addObject:model.url];
     }
     [browser showWithPictureURLs:pics atIndex:indexPath.item];

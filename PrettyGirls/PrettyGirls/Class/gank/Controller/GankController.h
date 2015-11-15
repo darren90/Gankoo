@@ -1,13 +1,13 @@
 //
-//  WaterModel.m
+//  GankController.h
 //  PrettyGirls
 //
 //  Created by Tengfei on 15/11/15.
 //  Copyright © 2015年 tengfei. All rights reserved.
 //
 
-#import "WaterModel.h"
+#import <UIKit/UIKit.h>
 
-@implementation WaterModel
+@interface GankController : UITableViewController
 
 @end

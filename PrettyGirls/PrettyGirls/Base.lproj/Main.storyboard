@@ -25,10 +25,46 @@
             </objects>
             <point key="canvasLocation" x="-767" y="452"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Gank Detail Controller-->
+        <scene sceneID="fhg-hw-hzn">
+            <objects>
+                <viewController storyboardIdentifier="GankDetail" id="FeN-ma-Iru" customClass="GankDetailController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xe0-as-P9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="f2V-Dh-AhK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I6o-Us-4DM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evd-AW-RDX">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="evd-AW-RDX" secondAttribute="trailing" id="2FJ-cn-SKc"/>
+                            <constraint firstItem="evd-AW-RDX" firstAttribute="top" secondItem="Xe0-as-P9g" secondAttribute="bottom" id="U0U-EV-8es"/>
+                            <constraint firstItem="evd-AW-RDX" firstAttribute="leading" secondItem="I6o-Us-4DM" secondAttribute="leading" id="gRK-YN-TuP"/>
+                            <constraint firstItem="f2V-Dh-AhK" firstAttribute="top" secondItem="evd-AW-RDX" secondAttribute="bottom" id="qi4-dO-mNt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zWp-nd-BcC"/>
+                    <connections>
+                        <outlet property="webView" destination="evd-AW-RDX" id="3Bh-ds-1Cs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YoQ-fV-lfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="468"/>
+        </scene>
+        <!--干货-->
         <scene sceneID="wnc-Wt-4wB">
             <objects>
-                <tableViewController id="tLe-US-khO" sceneMemberID="viewController">
+                <tableViewController id="tLe-US-khO" customClass="GankController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KmQ-wj-LtN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +87,10 @@
                             <outlet property="delegate" destination="tLe-US-khO" id="dKg-O5-uTk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="mV5-PX-ul7"/>
+                    <navigationItem key="navigationItem" title="干货" id="mV5-PX-ul7"/>
+                    <connections>
+                        <segue destination="FeN-ma-Iru" kind="push" identifier="gankDe" id="HGH-ZY-lNx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eid-h4-gI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

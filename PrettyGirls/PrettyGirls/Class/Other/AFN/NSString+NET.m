@@ -16,6 +16,7 @@
 {
     return [NSString stringWithFormat:@"%@/%@/%@",KURLPrefix,@"data",port];
 }
+
 + (NSString*)deviceString
 {
     // 需要#import "sys/utsname.h"

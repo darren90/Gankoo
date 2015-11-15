@@ -1,5 +1,5 @@
 //
-//  WaterCell.h
+//  GankDetailController.h
 //  PrettyGirls
 //
 //  Created by Tengfei on 15/11/15.
@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 @class MainModel;
 
-@interface WaterCell : UICollectionViewCell
-
-
+@interface GankDetailController : UIViewController
 
 @property (nonatomic,strong)MainModel * model;
-
 
 
 @end
