@@ -24,7 +24,9 @@
       success:^(AFHTTPRequestOperation *operation, id responseObject) {
           NSLog(@"请求成功");
           if (success) {
-              success(responseObject);
+              if ([responseObject[@"error" ] boolValue] == FALSE) {
+                  success(responseObject);
+              }
           }
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"请求失败:%@",error);

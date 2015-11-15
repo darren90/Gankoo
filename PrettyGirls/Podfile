@@ -2,3 +2,5 @@ pod "AFNetworking", "~> 2.0"
 pod 'SDWebImage', '~>3.7'
 pod 'MJRefresh'
 pod 'MJExtension'
+pod 'Bugly'
+pod 'UMengAnalytics'##标准SDK，含IDFA

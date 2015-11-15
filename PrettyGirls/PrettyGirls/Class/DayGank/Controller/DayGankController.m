@@ -56,6 +56,65 @@
 }
 
 
+-(NSString *)getDateStr{
+    NSInteger year,month,day,hour,min,sec,week;
+    NSString *weekStr=nil;
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate *now = [NSDate date];;
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |
+    NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    
+    comps = [calendar components:unitFlags fromDate:now];
+    year = [comps year];
+    week = [comps weekday];
+    month = [comps month];
+    day = [comps day];
+    hour = [comps hour];
+    min = [comps minute];
+    sec = [comps second];
+    
+//    if(week==1) {//星期天
+//    }else if(week==2){
+//    }else if(week==3){
+//    }else if(week==4){
+//    }else if(week==5){
+//    }else if(week==6){
+//        day = day - 1;
+//        week = week -1;
+//    }else if(week==7){//星期六
+//        day = day - 2;
+//        week = week - 2;
+//    }else {
+//        NSLog(@"error!");
+//    }
+    day = [self getGankDate:day week:week];
+    if (hour < 18) {
+        day = [self getGankDate:day-1 week:week-1];
+    }
+    
+    NSLog(@"现在是:%ld年%ld月%ld日 %ld时%ld分%ld秒  %@",(long)year,(long)month,(long)day,(long)hour,(long)min,(long)sec,weekStr);
+    NSLog(@"现在是:%ld/%ld/%ld",(long)year,(long)month,(long)day);
+    return[NSString stringWithFormat:@"%ld/%ld/%ld",(long)year,(long)month,(long)day];
+}
+
+-(NSInteger)getGankDate:(NSInteger)day week:(NSInteger)week
+{
+    if(week==1) {
+        day = day - 2;
+    }else if(week==2){
+    }else if(week==3){
+    }else if(week==4){
+    }else if(week==5){
+    }else if(week==6){
+    }else if(week==7){
+        day = day - 1;
+    }else {
+        NSLog(@"error!");
+    }
+    return day;
+}
 
 - (void)scrollToTop
 {
@@ -87,7 +146,6 @@
     }
     
     for (NSString *key in json) {
-        NSLog(@"key: %@ value: %@", key, json[key]);
         if ([key isEqualToString:@"福利"]) continue;
         DayModel *dayModel = [[DayModel alloc]init];
         dayModel.title = key;

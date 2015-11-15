@@ -20,22 +20,28 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bugly (1.4.2)
   - MJExtension (3.0.3)
   - MJRefresh (3.0.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - UMengAnalytics (3.6.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - Bugly
   - MJExtension
   - MJRefresh
   - SDWebImage (~> 3.7)
+  - UMengAnalytics
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Bugly: 8f9f9a522ee0fdd9892eff0797a0a1f50b456da1
   MJExtension: de557e1c48ef3212590d3203764c8003fae68815
   MJRefresh: 85377dc8c70395cf329e102a5c55505ef387c2e1
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  UMengAnalytics: d24fb5200e13d2874f36b6337bc129b96511c54e
 
 COCOAPODS: 0.38.2

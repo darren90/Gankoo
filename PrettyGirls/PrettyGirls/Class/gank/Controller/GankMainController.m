@@ -169,7 +169,7 @@
         [_mainArray addObject:@"前端"];
         [_mainArray addObject:@"拓展资源"];
         [_mainArray addObject:@"休息视频"];
-        [_mainArray addObject:@"all"];
+//        [_mainArray addObject:@"all"];
     }
     return _mainArray;
 }
