@@ -42,6 +42,8 @@
 		FE11658B1BF8828700094591 /* GankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1165891BF8828700094591 /* GankCell.xib */; };
 		FE11658E1BF8872200094591 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11658D1BF8872200094591 /* NSDate+Category.m */; };
 		FE1165911BF88B5200094591 /* GankDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165901BF88B5200094591 /* GankDetailController.m */; };
+		FE1165941BF8A72500094591 /* GankMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165931BF8A72500094591 /* GankMainController.m */; };
+		FE1165971BF8AA0800094591 /* TFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165961BF8AA0800094591 /* TFLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,10 @@
 		FE11658D1BF8872200094591 /* NSDate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
 		FE11658F1BF88B5200094591 /* GankDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GankDetailController.h; sourceTree = "<group>"; };
 		FE1165901BF88B5200094591 /* GankDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GankDetailController.m; sourceTree = "<group>"; };
+		FE1165921BF8A72500094591 /* GankMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GankMainController.h; sourceTree = "<group>"; };
+		FE1165931BF8A72500094591 /* GankMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GankMainController.m; sourceTree = "<group>"; };
+		FE1165951BF8AA0800094591 /* TFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFLabel.h; sourceTree = "<group>"; };
+		FE1165961BF8AA0800094591 /* TFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +417,8 @@
 		FE1165691BF85D6D00094591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE1165921BF8A72500094591 /* GankMainController.h */,
+				FE1165931BF8A72500094591 /* GankMainController.m */,
 				FE1165841BF8806F00094591 /* GankController.h */,
 				FE1165851BF8806F00094591 /* GankController.m */,
 				FE11658F1BF88B5200094591 /* GankDetailController.h */,
@@ -432,6 +440,8 @@
 				FE1165871BF8828700094591 /* GankCell.h */,
 				FE1165881BF8828700094591 /* GankCell.m */,
 				FE1165891BF8828700094591 /* GankCell.xib */,
+				FE1165951BF8AA0800094591 /* TFLabel.h */,
+				FE1165961BF8AA0800094591 /* TFLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -693,8 +703,10 @@
 				FE1164F81BF847CF00094591 /* main.m in Sources */,
 				FE1165661BF85A7400094591 /* AFNTool.m in Sources */,
 				FE1165911BF88B5200094591 /* GankDetailController.m in Sources */,
+				FE1165941BF8A72500094591 /* GankMainController.m in Sources */,
 				FE11655A1BF84C4500094591 /* MLBroadcastView.m in Sources */,
 				FE1165521BF84C4500094591 /* HUDTools.m in Sources */,
+				FE1165971BF8AA0800094591 /* TFLabel.m in Sources */,
 				FE11658E1BF8872200094591 /* NSDate+Category.m in Sources */,
 				FE11657A1BF85F6100094591 /* WaterCell.m in Sources */,
 				FE1165581BF84C4500094591 /* MLPicture.m in Sources */,

@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.rowHeight = 80;
-    
+        
     UIGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(scrollToTop)];
     [self.navigationController.navigationBar addGestureRecognizer:tap];
     
@@ -55,7 +55,8 @@
 - (void)requestData
 {
     __weak __typeof (self)weakSelf = self;
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%d",[NSString getUrlWithPort:KInter_video],KRowPage,self.page];
+   NSString *urlDo =[self.urlDomain stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%d",[NSString getUrlWithPort:urlDo],KRowPage,self.page];
     
     [AFNTool getWithURL:url params:nil success:^(id json) {
         [weakSelf stopFresh];

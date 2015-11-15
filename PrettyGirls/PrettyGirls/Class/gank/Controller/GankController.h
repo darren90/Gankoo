@@ -10,4 +10,10 @@
 
 @interface GankController : UITableViewController
 
+@property (nonatomic,assign) NSInteger index;
+
+@property (nonatomic,copy)NSString * urlDomain;
+
+
+
 @end

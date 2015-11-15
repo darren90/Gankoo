@@ -59,12 +59,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoQ-fV-lfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="468"/>
+            <point key="canvasLocation" x="1322" y="496"/>
         </scene>
         <!--干货-->
         <scene sceneID="wnc-Wt-4wB">
             <objects>
-                <tableViewController id="tLe-US-khO" customClass="GankController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Gank" id="tLe-US-khO" customClass="GankController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KmQ-wj-LtN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ePH-A4-lmT">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ePH-A4-lmT" id="sob-7a-SHV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -94,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eid-h4-gI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="468"/>
+            <point key="canvasLocation" x="892" y="496"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="cHy-Gh-2Vx">
@@ -157,12 +157,59 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="tLe-US-khO" kind="relationship" relationship="rootViewController" id="058-Ij-29f"/>
+                        <segue destination="Dv8-gu-UHN" kind="relationship" relationship="rootViewController" id="yDw-8u-sUe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uds-rl-9mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-270" y="452"/>
+        </scene>
+        <!--干货-->
+        <scene sceneID="Xwu-tm-kLb">
+            <objects>
+                <viewController id="Dv8-gu-UHN" customClass="GankMainController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XYa-hC-y0f"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZBf-jA-mSM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZpD-SC-ozb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfH-sd-97k">
+                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="n8A-Or-sPe"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96A-zI-rwS">
+                                <rect key="frame" x="0.0" y="104" width="320" height="415"/>
+                                <animations/>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="96A-zI-rwS" firstAttribute="top" secondItem="ZfH-sd-97k" secondAttribute="bottom" id="A9Z-Bf-NaS"/>
+                            <constraint firstItem="ZfH-sd-97k" firstAttribute="leading" secondItem="ZpD-SC-ozb" secondAttribute="leading" id="Ajv-ej-qdc"/>
+                            <constraint firstItem="ZBf-jA-mSM" firstAttribute="top" secondItem="96A-zI-rwS" secondAttribute="bottom" id="JlH-Ge-KrQ"/>
+                            <constraint firstItem="96A-zI-rwS" firstAttribute="leading" secondItem="ZpD-SC-ozb" secondAttribute="leading" id="SSS-Nh-2ay"/>
+                            <constraint firstItem="ZfH-sd-97k" firstAttribute="top" secondItem="XYa-hC-y0f" secondAttribute="bottom" id="Vza-q3-Jgu"/>
+                            <constraint firstAttribute="trailing" secondItem="ZfH-sd-97k" secondAttribute="trailing" id="gxD-7f-Mbc"/>
+                            <constraint firstAttribute="trailing" secondItem="96A-zI-rwS" secondAttribute="trailing" id="yJK-7P-4aH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="干货" id="yka-YY-cLq"/>
+                    <connections>
+                        <outlet property="mainScrollview" destination="96A-zI-rwS" id="qpe-4l-6lw"/>
+                        <outlet property="topScrollView" destination="ZfH-sd-97k" id="mLR-ZC-NoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ox-vy-bEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="462"/>
         </scene>
         <!--妹纸-->
         <scene sceneID="iVv-m0-3dD">
