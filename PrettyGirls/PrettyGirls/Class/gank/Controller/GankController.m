@@ -42,7 +42,7 @@
     }];
     
     //2：尾部刷新
-    self.tableView.mj_footer = [MJRefreshBackStateFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshAutoStateFooter footerWithRefreshingBlock:^{
         self.page ++;
         [weakSelf requestData];
     }];

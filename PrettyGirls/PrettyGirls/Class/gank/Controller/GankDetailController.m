@@ -9,7 +9,7 @@
 #import "GankDetailController.h"
 #import "MainModel.h"
 
-@interface GankDetailController ()
+@interface GankDetailController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
@@ -19,15 +19,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title  = self.model.desc;
-     
+    
+    [HUDTools showLoading:@"加载中..."];
+    self.webView.delegate = self;
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:KUrl(self.model.url)];
     [self.webView loadRequest:request];
+    if ([self.model.type isEqualToString:@"休息视频"]) {
+        [self initNotice];//加载视频横屏的通知
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - 刷新 页面
+-(void)refreshWebView
+{
+    [self.webView reload];
 }
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [HUDTools hideLoading];
+    
+    //自动播放
+    NSString * requestDurationString = @"document.documentElement.getElementsByTagName(\"video\")[0].play()";
+    [self.webView stringByEvaluatingJavaScriptFromString:requestDurationString];
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [HUDTools hideLoading];
+}
+
 #pragma - mark 视频播放的相关，初始化通知
 -(void)initNotice
 {
@@ -39,7 +62,7 @@
 #pragma - mark  进入全屏
 -(void)begainFullScreen
 {
-    NSLog(@"------begainFullScreen");
+    [HUDTools hideLoading];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.allowRotation = YES;
     
@@ -71,6 +94,11 @@
         [invocation setArgument:&val atIndex:2];
         [invocation invoke];
     }
+}
+
+-(void)dealloc
+{
+    [HUDTools hideLoading];
 }
 
 @end
