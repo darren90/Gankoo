@@ -10,7 +10,6 @@
 		7CDEF0BD20BD010630F57ADE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BDAC3B5031ED229000284E /* libPods.a */; };
 		FE1164F81BF847CF00094591 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1164F71BF847CF00094591 /* main.m */; };
 		FE1164FB1BF847CF00094591 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1164FA1BF847CF00094591 /* AppDelegate.m */; };
-		FE1164FE1BF847CF00094591 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1164FD1BF847CF00094591 /* ViewController.m */; };
 		FE1165011BF847CF00094591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1164FF1BF847CF00094591 /* Main.storyboard */; };
 		FE1165031BF847D000094591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1165021BF847D000094591 /* Assets.xcassets */; };
 		FE1165061BF847D000094591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1165041BF847D000094591 /* LaunchScreen.storyboard */; };
@@ -29,6 +28,13 @@
 		FE11655A1BF84C4500094591 /* MLBroadcastView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11654B1BF84C4500094591 /* MLBroadcastView.m */; };
 		FE11655B1BF84C4500094591 /* MLBroadcastViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11654D1BF84C4500094591 /* MLBroadcastViewCell.m */; };
 		FE11655C1BF84C4500094591 /* MLPictureBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11654F1BF84C4500094591 /* MLPictureBrowserCell.m */; };
+		FE1165651BF85A7400094591 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165601BF85A7400094591 /* AFAppDotNetAPIClient.m */; };
+		FE1165661BF85A7400094591 /* AFNTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165621BF85A7400094591 /* AFNTool.m */; };
+		FE1165671BF85A7400094591 /* NSString+NET.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165641BF85A7400094591 /* NSString+NET.m */; };
+		FE1165761BF85DEE00094591 /* GirlsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165751BF85DEE00094591 /* GirlsController.m */; };
+		FE11657A1BF85F6100094591 /* WaterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165781BF85F6100094591 /* WaterCell.m */; };
+		FE11657B1BF85F6100094591 /* WaterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1165791BF85F6100094591 /* WaterCell.xib */; };
+		FE11657E1BF8609B00094591 /* WaterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE11657D1BF8609B00094591 /* WaterModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +62,6 @@
 		FE1164F71BF847CF00094591 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE1164F91BF847CF00094591 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FE1164FA1BF847CF00094591 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FE1164FC1BF847CF00094591 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FE1164FD1BF847CF00094591 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FE1165001BF847CF00094591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE1165021BF847D000094591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE1165051BF847D000094591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,19 @@
 		FE11654E1BF84C4500094591 /* MLPictureBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPictureBrowserCell.h; sourceTree = "<group>"; };
 		FE11654F1BF84C4500094591 /* MLPictureBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPictureBrowserCell.m; sourceTree = "<group>"; };
 		FE11655D1BF84C5E00094591 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FE11655F1BF85A7400094591 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
+		FE1165601BF85A7400094591 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
+		FE1165611BF85A7400094591 /* AFNTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNTool.h; sourceTree = "<group>"; };
+		FE1165621BF85A7400094591 /* AFNTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNTool.m; sourceTree = "<group>"; };
+		FE1165631BF85A7400094591 /* NSString+NET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NET.h"; sourceTree = "<group>"; };
+		FE1165641BF85A7400094591 /* NSString+NET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NET.m"; sourceTree = "<group>"; };
+		FE1165741BF85DEE00094591 /* GirlsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GirlsController.h; sourceTree = "<group>"; };
+		FE1165751BF85DEE00094591 /* GirlsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GirlsController.m; sourceTree = "<group>"; };
+		FE1165771BF85F6100094591 /* WaterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterCell.h; sourceTree = "<group>"; };
+		FE1165781BF85F6100094591 /* WaterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterCell.m; sourceTree = "<group>"; };
+		FE1165791BF85F6100094591 /* WaterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterCell.xib; sourceTree = "<group>"; };
+		FE11657C1BF8609B00094591 /* WaterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterModel.h; sourceTree = "<group>"; };
+		FE11657D1BF8609B00094591 /* WaterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +187,6 @@
 				FE1164FF1BF847CF00094591 /* Main.storyboard */,
 				FE1165021BF847D000094591 /* Assets.xcassets */,
 				FE1165291BF84C4500094591 /* Class */,
-				FE1164FC1BF847CF00094591 /* ViewController.h */,
-				FE1164FD1BF847CF00094591 /* ViewController.m */,
 				FE1164F61BF847CF00094591 /* Supporting Files */,
 			);
 			path = PrettyGirls;
@@ -208,8 +223,12 @@
 		FE1165291BF84C4500094591 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FE11655E1BF85A7400094591 /* AFN */,
 				FE11652E1BF84C4500094591 /* Other */,
 				FE11652A1BF84C4500094591 /* Main */,
+				FE11656C1BF85D6D00094591 /* Girls */,
+				FE1165681BF85D6D00094591 /* gank */,
+				FE1165701BF85D6D00094591 /* More */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -341,6 +360,120 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FE11655E1BF85A7400094591 /* AFN */ = {
+			isa = PBXGroup;
+			children = (
+				FE11655F1BF85A7400094591 /* AFAppDotNetAPIClient.h */,
+				FE1165601BF85A7400094591 /* AFAppDotNetAPIClient.m */,
+				FE1165611BF85A7400094591 /* AFNTool.h */,
+				FE1165621BF85A7400094591 /* AFNTool.m */,
+				FE1165631BF85A7400094591 /* NSString+NET.h */,
+				FE1165641BF85A7400094591 /* NSString+NET.m */,
+			);
+			name = AFN;
+			path = Other/AFN;
+			sourceTree = "<group>";
+		};
+		FE1165681BF85D6D00094591 /* gank */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165691BF85D6D00094591 /* Controller */,
+				FE11656A1BF85D6D00094591 /* Model */,
+				FE11656B1BF85D6D00094591 /* View */,
+			);
+			path = gank;
+			sourceTree = "<group>";
+		};
+		FE1165691BF85D6D00094591 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE11656A1BF85D6D00094591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE11656B1BF85D6D00094591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE11656C1BF85D6D00094591 /* Girls */ = {
+			isa = PBXGroup;
+			children = (
+				FE11656D1BF85D6D00094591 /* Controller */,
+				FE11656E1BF85D6D00094591 /* Model */,
+				FE11656F1BF85D6D00094591 /* View */,
+			);
+			path = Girls;
+			sourceTree = "<group>";
+		};
+		FE11656D1BF85D6D00094591 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165741BF85DEE00094591 /* GirlsController.h */,
+				FE1165751BF85DEE00094591 /* GirlsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE11656E1BF85D6D00094591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE11657C1BF8609B00094591 /* WaterModel.h */,
+				FE11657D1BF8609B00094591 /* WaterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE11656F1BF85D6D00094591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165771BF85F6100094591 /* WaterCell.h */,
+				FE1165781BF85F6100094591 /* WaterCell.m */,
+				FE1165791BF85F6100094591 /* WaterCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE1165701BF85D6D00094591 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				FE1165711BF85D6D00094591 /* Controller */,
+				FE1165721BF85D6D00094591 /* Model */,
+				FE1165731BF85D6D00094591 /* View */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		FE1165711BF85D6D00094591 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE1165721BF85D6D00094591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE1165731BF85D6D00094591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -448,6 +581,7 @@
 			files = (
 				FE1165061BF847D000094591 /* LaunchScreen.storyboard in Resources */,
 				FE1165031BF847D000094591 /* Assets.xcassets in Resources */,
+				FE11657B1BF85F6100094591 /* WaterCell.xib in Resources */,
 				FE1165011BF847CF00094591 /* Main.storyboard in Resources */,
 				FE1165541BF84C4500094591 /* SVProgressHUD.bundle in Resources */,
 			);
@@ -507,20 +641,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1165651BF85A7400094591 /* AFAppDotNetAPIClient.m in Sources */,
+				FE1165761BF85DEE00094591 /* GirlsController.m in Sources */,
 				FE1165591BF84C4500094591 /* UIImage+Tint.m in Sources */,
 				FE1165501BF84C4500094591 /* Global.m in Sources */,
 				FE1165551BF84C4500094591 /* SVProgressHUD.m in Sources */,
 				FE1165571BF84C4500094591 /* MLPictureBrowser.m in Sources */,
+				FE1165671BF85A7400094591 /* NSString+NET.m in Sources */,
 				FE11655C1BF84C4500094591 /* MLPictureBrowserCell.m in Sources */,
-				FE1164FE1BF847CF00094591 /* ViewController.m in Sources */,
 				FE11655B1BF84C4500094591 /* MLBroadcastViewCell.m in Sources */,
 				FE1165561BF84C4500094591 /* UIAlertView+Blocks.m in Sources */,
 				FE1164FB1BF847CF00094591 /* AppDelegate.m in Sources */,
+				FE11657E1BF8609B00094591 /* WaterModel.m in Sources */,
 				FE1165531BF84C4500094591 /* RIButtonItem.m in Sources */,
 				FE1165511BF84C4500094591 /* WdCleanCaches.m in Sources */,
 				FE1164F81BF847CF00094591 /* main.m in Sources */,
+				FE1165661BF85A7400094591 /* AFNTool.m in Sources */,
 				FE11655A1BF84C4500094591 /* MLBroadcastView.m in Sources */,
 				FE1165521BF84C4500094591 /* HUDTools.m in Sources */,
+				FE11657A1BF85F6100094591 /* WaterCell.m in Sources */,
 				FE1165581BF84C4500094591 /* MLPicture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
