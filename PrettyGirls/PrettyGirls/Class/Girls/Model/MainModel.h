@@ -25,8 +25,7 @@
 @property (nonatomic,copy)NSString * desc;
 @property (nonatomic,copy)NSString * type;
 @property (nonatomic,copy)NSString * url;
-@property (nonatomic,copy)NSString * publishedAt
-;
+@property (nonatomic,copy)NSString * publishedAt;
 
 
 

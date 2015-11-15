@@ -3,10 +3,17 @@
 
 ---
 
+API from gank.io: http://gank.io/api.
+
 业余的iOS项目
 
- 
-- API from gank.io: http://gank.io/api.
+
+- 妹纸图缓存到本地，没网的时候也可以放心的看
+- 视频可自定播放，且横屏
+
+
+
+
 
 ## 感谢
 

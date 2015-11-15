@@ -16,9 +16,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="JWd-MA-3WU" kind="relationship" relationship="viewControllers" id="akI-E1-NzP"/>
-                        <segue destination="Wrj-hK-9kb" kind="relationship" relationship="viewControllers" id="vEk-La-kUA"/>
-                        <segue destination="ugk-9q-c3J" kind="relationship" relationship="viewControllers" id="dcd-L3-IzY"/>
+                        <segue destination="zUB-Cb-Gx8" kind="relationship" relationship="viewControllers" id="oFV-yI-5Ut"/>
+                        <segue destination="JWd-MA-3WU" kind="relationship" relationship="viewControllers" id="zwx-xr-ds1"/>
+                        <segue destination="Wrj-hK-9kb" kind="relationship" relationship="viewControllers" id="1A4-68-A0X"/>
+                        <segue destination="ugk-9q-c3J" kind="relationship" relationship="viewControllers" id="8CM-Be-94j"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bn0-7d-UFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,6 +212,56 @@
             </objects>
             <point key="canvasLocation" x="174" y="462"/>
         </scene>
+        <!--每日干货-->
+        <scene sceneID="K0v-1G-zKL">
+            <objects>
+                <navigationController id="zUB-Cb-Gx8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="每日干货" id="DE8-BS-d0V"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v27-mO-NmH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uwY-qL-POv" kind="relationship" relationship="rootViewController" id="fwz-LE-ucM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BI0-O2-LSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="-873"/>
+        </scene>
+        <!--每日干货-->
+        <scene sceneID="207-XW-heH">
+            <objects>
+                <tableViewController id="uwY-qL-POv" customClass="DayGankController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wE1-Cd-URd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dz8-bu-jN1">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dz8-bu-jN1" id="AON-QX-KFt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uwY-qL-POv" id="LKJ-6h-OvD"/>
+                            <outlet property="delegate" destination="uwY-qL-POv" id="rtq-Sf-qOV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="每日干货" id="S25-dC-t1a"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuZ-iD-zWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248" y="-873"/>
+        </scene>
         <!--妹纸-->
         <scene sceneID="iVv-m0-3dD">
             <objects>
@@ -247,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5g-OP-Lwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="-229"/>
+            <point key="canvasLocation" x="248" y="-210"/>
         </scene>
     </scenes>
 </document>

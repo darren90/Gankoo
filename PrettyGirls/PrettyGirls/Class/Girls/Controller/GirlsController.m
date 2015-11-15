@@ -28,6 +28,8 @@ static NSString *const IDENTTFIER = @"waterFlow";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self initCacheData];
   
     UIGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(scrollToTop)];
     [self.navigationController.navigationBar addGestureRecognizer:tap];
@@ -54,12 +56,13 @@ static NSString *const IDENTTFIER = @"waterFlow";
     flowLayout.sectionInset = UIEdgeInsetsMake(40/3, 10, 0, 10);
     
     self.page = 1;
+    self.isRefreshing = YES;
     //第一次请求
     [self requestData];
     
     __weak __typeof(self) weakSelf = self;
     //1：头部刷新
-    self.waterView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
+    self.waterView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1 ;
         weakSelf.isRefreshing = YES;
         [weakSelf requestData];
@@ -68,14 +71,23 @@ static NSString *const IDENTTFIER = @"waterFlow";
     //2：尾部刷新
     self.waterView.mj_footer = [MJRefreshBackStateFooter footerWithRefreshingBlock:^{
         self.page ++;
+        weakSelf.isRefreshing = NO;
         [weakSelf requestData];
     }];
+}
+
+-(void)initCacheData
+{
+    NSArray *array = [DatabaseTool getPrettyGirls];
+    if (array.count) {
+        [self.dataArray addObjectsFromArray:array];
+        [self.waterView reloadData];
+    }
 }
 
 - (void)scrollToTop
 {
 //    [self.specialTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
-   
     [self.waterView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
 }
 
@@ -87,13 +99,17 @@ static NSString *const IDENTTFIER = @"waterFlow";
     [AFNTool getWithURL:url params:nil success:^(id json) {
         [weakSelf stopFresh];
         NSArray *array = [MainModel mj_objectArrayWithKeyValuesArray:json[@"results"]];
+        if (weakSelf.isRefreshing) {
+            [self.dataArray removeAllObjects];
+        }
         [weakSelf.dataArray addObjectsFromArray:array];
         [weakSelf.waterView reloadData];
+        [DatabaseTool addPrettyGirlsWithArray:array];
     } failure:^(NSError *error) {
         [weakSelf stopFresh];
     }];
-    
 }
+
 
 - (void)stopFresh
 {

@@ -35,19 +35,20 @@
     
     __weak __typeof(self) weakSelf = self;
     //1：头部刷新
-    self.tableView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1 ;
         weakSelf.isRefreshing = YES;
         [weakSelf requestData];
     }];
     
     //2：尾部刷新
-    self.tableView.mj_footer = [MJRefreshAutoStateFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         self.page ++;
         [weakSelf requestData];
     }];
 
 }
+
 - (void)scrollToTop
 {
     [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
