@@ -21,7 +21,15 @@
 @end
 
 @implementation GankController
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"干货-分类显示界面"];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"干货-分类显示界面"];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.rowHeight = 80;

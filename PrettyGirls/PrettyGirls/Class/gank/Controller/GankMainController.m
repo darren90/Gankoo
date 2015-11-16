@@ -21,7 +21,15 @@
 @end
 
 @implementation GankMainController
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"干货-聚合主页面"];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"干货-聚合主页面"];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     

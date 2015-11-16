@@ -26,6 +26,16 @@
 
 @implementation DayGankController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"每日干货"];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"每日干货"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     TFCycleScrollView *cycleView = [[TFCycleScrollView alloc]init];

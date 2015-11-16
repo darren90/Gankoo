@@ -33,7 +33,20 @@
 @end
 
 @implementation TFPictureBrowser
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"妹纸-图片浏览"];
+    
+    for (UIView *view in _mainView.subviews) {
+        NSLog(@"%@",view);
+    }
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"妹纸-图片浏览"];
+}
+ 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -113,15 +126,6 @@
         _mainView.frame = self.view.bounds;
     }
     return _mainView;
-}
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    //
-    for (UIView *view in _mainView.subviews) {
-        NSLog(@"%@",view);
-    }
 }
 
 - (UIView*)overlayView
