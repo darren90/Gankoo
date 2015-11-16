@@ -56,6 +56,7 @@
 		FE1165C11BF8DD2900094591 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165B91BF8DD2900094591 /* FMDatabaseQueue.m */; };
 		FE1165C21BF8DD2900094591 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165BC1BF8DD2900094591 /* FMResultSet.m */; };
 		FE1165C41BF8DFED00094591 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1165C31BF8DFED00094591 /* libsqlite3.tbd */; };
+		FE1165C91BFA388600094591 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165C81BFA388600094591 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,8 @@
 		FE1165BB1BF8DD2900094591 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		FE1165BC1BF8DD2900094591 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		FE1165C31BF8DFED00094591 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FE1165C71BFA388600094591 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		FE1165C81BFA388600094591 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -539,6 +542,8 @@
 		FE1165711BF85D6D00094591 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE1165C71BFA388600094591 /* SettingViewController.h */,
+				FE1165C81BFA388600094591 /* SettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 			files = (
 				FE1165651BF85A7400094591 /* AFAppDotNetAPIClient.m in Sources */,
 				FE1165A11BF8CC4C00094591 /* TFCycleScrollModel.m in Sources */,
+				FE1165C91BFA388600094591 /* SettingViewController.m in Sources */,
 				FE1165761BF85DEE00094591 /* GirlsController.m in Sources */,
 				FE1165591BF84C4500094591 /* UIImage+Tint.m in Sources */,
 				FE1165501BF84C4500094591 /* Global.m in Sources */,
@@ -1000,7 +1006,7 @@
 				INFOPLIST_FILE = PrettyGirls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.PrettyGirls.PrettyGirls;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.PrettyGirls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1014,7 +1020,7 @@
 				INFOPLIST_FILE = PrettyGirls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.PrettyGirls.PrettyGirls;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.PrettyGirls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
