@@ -38,6 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     TFCycleScrollView *cycleView = [[TFCycleScrollView alloc]init];
     cycleView.frame = CGRectMake(0,0, self.view.frame.size.width, 200);
     self.cycleView = cycleView;
@@ -55,22 +57,25 @@
     [self.navigationController.navigationBar addGestureRecognizer:tap];
     
     //第一次请求
-    [self requestData];
+    [self requestDataWithIndex:0];
     
     __weak __typeof(self) weakSelf = self;
     //1：头部刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weakSelf.isRefreshing = YES;
-        [weakSelf requestData];
+        [weakSelf requestDataWithIndex:0];
     }];
-    
-    [self getDateStr];
 }
+/**
+ *  得到当前日期的字符格式
+ *
+ *  @param index 与当前日期向前叉几天的差值
+ *
+ *  @return 日期的字符串格式
+ */
 
-
--(NSString *)getDateStr{
+-(NSString *)getDateStrWithindex:(int)index{
     NSInteger year,month,day,hour,min,sec,week;
-    NSString *weekStr=nil;
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate *now = [NSDate date];;
@@ -87,51 +92,36 @@
     min = [comps minute];
     sec = [comps second];
     
+//    int index = 0;
     if(week==1) {//星期天
-        day = day - 2;
-        week = week - 2;
-    }else if(week==2){
-    }else if(week==3){
-    }else if(week==4){
-    }else if(week==5){
-    }else if(week==6){//星期六
-        day = day - 1;
-        week = week -1;
-    }else if(week==7){
-    }else {
-        NSLog(@"error!");
-    }
-    if (day <= 0) {//日期处于1号，或者2号不够减，此时月份要-1
-        //月份-1后，1：判断月份有没有够不够减
-        month = month-1;
-    }
-    
-    //
-    day = [self getGankDate:day week:week];
-    if (hour < 18) {
-        day = [self getGankDate:day-1 week:week-1];
-    }
-    
-    NSLog(@"现在是:%ld年%ld月%ld日 %ld时%ld分%ld秒  %@",(long)year,(long)month,(long)day,(long)hour,(long)min,(long)sec,weekStr);
-//    NSLog(@"现在是:%ld/%ld/%ld",(long)year,(long)month,(long)day);
-    return[NSString stringWithFormat:@"%ld/%ld/%ld",(long)year,(long)month,(long)day];
-}
-
--(NSInteger)getGankDate:(NSInteger)day week:(NSInteger)week
-{
-    if(week==1) {
-        day = day - 2;
+        index -= 2;
     }else if(week==2){
     }else if(week==3){
     }else if(week==4){
     }else if(week==5){
     }else if(week==6){
-    }else if(week==7){
-        day = day - 1;
+    }else if(week==7){//星期六
+        index -= 1;
     }else {
         NSLog(@"error!");
     }
-    return day;
+    // 获取从当前时间开始，3天之前的日期
+    NSDate* newDate = [[NSDate alloc] initWithTimeIntervalSinceNow: -index*3600*24];
+    NSString *str = [self timeStrWithDate:newDate];
+    
+//    NSLog(@"现在是:%ld年%ld月%ld日 %ld时%ld分%ld秒  %@",(long)year,(long)month,(long)day,(long)hour,(long)min,(long)sec,weekStr);
+    NSLog(@"现在是:%@",str);
+    return str;
+}
+
+-(NSString *)timeStrWithDate:(NSDate *)date
+{
+    NSString *format = @"yyyy/MM/dd";
+    NSDateFormatter * df = [[NSDateFormatter alloc] init];
+    NSTimeZone * timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    [df setDateFormat:format];
+    [df setTimeZone:timeZone];
+    return [df stringFromDate:date];
 }
 
 - (void)scrollToTop
@@ -140,10 +130,10 @@
 }
 
 //取出，除周六，周天以外的时间 ，但是如果，当天的数据没有，自动加载前一天的数据
-- (void)requestData
+- (void)requestDataWithIndex:(int)index
 {
     __weak __typeof (self)weakSelf = self;
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@",KURLPrefix,KInter_day,@"2015/11/18"];
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@",KURLPrefix,KInter_day,[self getDateStrWithindex:index]];
     
     [AFNTool getWithURL:url params:nil success:^(id json) {
         [weakSelf stopFresh];
@@ -156,7 +146,12 @@
 
 -(void)successTidyData:(NSDictionary *)json
 {
+    BOOL isExist = [json.allKeys containsObject:@"福利"];
     //通过KEY找到value
+    if (!isExist) {
+         [self requestDataWithIndex:1];
+        return;
+    }
     NSArray *imgDicArray = [MainModel mj_objectArrayWithKeyValuesArray:[json objectForKey:@"福利"]] ;
     if (imgDicArray.count) {
         for (MainModel *model in imgDicArray) {
@@ -181,9 +176,6 @@
     [self.tableView.mj_footer endRefreshing];
     [self.tableView.mj_header endRefreshing];
 }
-
-
-#pragma  - mark
 
 #pragma mark - Table view data source
 
@@ -212,7 +204,6 @@
     titleLabel.textColor = [UIColor blackColor];
     return titleLabel;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GankCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GankCell"];
     if(cell == nil){
@@ -269,3 +260,49 @@
 
 
 @end
+
+/**
+ 
+ 
+ -(int)weekdayFromDateStr:(NSString *)dateStr {
+ NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+ fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"UTC"];
+ fmt.dateFormat = @"yyyy-MM-dd";
+ NSDate *inputDate = [fmt dateFromString:dateStr];
+ 
+ NSArray *weekdays = [NSArray arrayWithObjects: [NSNull null], @"1", @"2", @"3", @"4", @"5", @"6", @"7", nil];
+ 
+ NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+ 
+ NSTimeZone *timeZone = [[NSTimeZone alloc] initWithName:@"Asia/Shanghai"];
+ 
+ [calendar setTimeZone: timeZone];
+ 
+ NSCalendarUnit calendarUnit = NSCalendarUnitWeekday;
+ 
+ NSDateComponents *theComponents = [calendar components:calendarUnit fromDate:inputDate];
+ 
+ NSLog(@"--这个日期星期1-:%@",[weekdays objectAtIndex:theComponents.weekday]);
+ NSString *weekStr = [weekdays objectAtIndex:theComponents.weekday];
+ return [weekStr intValue];
+ }
+ 
+ - (NSString*)weekdayStringFromDate:(NSDate*)inputDate {
+ 
+ NSArray *weekdays = [NSArray arrayWithObjects: [NSNull null], @"星期天", @"星期一", @"星期二", @"星期三", @"星期四", @"星期五", @"星期六", nil];
+ 
+ NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+ 
+ NSTimeZone *timeZone = [[NSTimeZone alloc] initWithName:@"Asia/Shanghai"];
+ 
+ [calendar setTimeZone: timeZone];
+ 
+ NSCalendarUnit calendarUnit = NSCalendarUnitWeekday;
+ 
+ NSDateComponents *theComponents = [calendar components:calendarUnit fromDate:inputDate];
+ 
+ NSLog(@"--这个日期星期2-:%@",[weekdays objectAtIndex:theComponents.weekday]);
+ return [weekdays objectAtIndex:theComponents.weekday];
+ }
+ 
+ */
