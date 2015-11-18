@@ -30,7 +30,7 @@ static FMDatabase *_db;
     
     [_db setShouldCacheStatements:YES];
  
-    //1：新下载  fileName 主键
+    //1：新下载  url 主键
     if (![_db tableExists:@"PrettyGirls"]) {
         [_db executeUpdate:@"CREATE TABLE if not exists PrettyGirls (id integer primary key autoincrement,who TEXT,desc TEXT,type TEXT,url TEXT,publishedAt TEXT)"];
     }
@@ -62,14 +62,13 @@ static FMDatabase *_db;
     [_db setShouldCacheStatements:YES];
     
     //1:判断是否已经加入到数据库中 who TEXT,desc TEXT,type TEXT,url TEXT,publishedAt TEXT
-    int count = [_db intForQuery:@"SELECT COUNT(url) FROM PrettyGirls where fileName = ?;",model.url];
+    int count = [_db intForQuery:@"SELECT COUNT(url) FROM PrettyGirls where url = ?;",model.url];
     
     if (count >= 1) {
         NSLog(@"-已经在下载列表中--");
         return NO;
     }
     //2:存储
-//    fileName title TEXT,fileURL TEXT,iconUrl TEXT,filesize TEXT,filerecievesize TEXT,isHadDown integer,urlType integer
     BOOL result = [_db executeUpdate:@"insert into PrettyGirls (who,desc,type,url,publishedAt) values (?,?,?,?,?);",model.who,model.desc,model.type,model.url,model.publishedAt];
     
     [_db close];
