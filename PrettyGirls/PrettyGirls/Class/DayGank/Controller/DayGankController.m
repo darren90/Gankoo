@@ -63,6 +63,8 @@
         weakSelf.isRefreshing = YES;
         [weakSelf requestData];
     }];
+    
+    [self getDateStr];
 }
 
 
@@ -85,27 +87,33 @@
     min = [comps minute];
     sec = [comps second];
     
-//    if(week==1) {//星期天
-//    }else if(week==2){
-//    }else if(week==3){
-//    }else if(week==4){
-//    }else if(week==5){
-//    }else if(week==6){
-//        day = day - 1;
-//        week = week -1;
-//    }else if(week==7){//星期六
-//        day = day - 2;
-//        week = week - 2;
-//    }else {
-//        NSLog(@"error!");
-//    }
+    if(week==1) {//星期天
+        day = day - 2;
+        week = week - 2;
+    }else if(week==2){
+    }else if(week==3){
+    }else if(week==4){
+    }else if(week==5){
+    }else if(week==6){//星期六
+        day = day - 1;
+        week = week -1;
+    }else if(week==7){
+    }else {
+        NSLog(@"error!");
+    }
+    if (day <= 0) {//日期处于1号，或者2号不够减，此时月份要-1
+        //月份-1后，1：判断月份有没有够不够减
+        month = month-1;
+    }
+    
+    //
     day = [self getGankDate:day week:week];
     if (hour < 18) {
         day = [self getGankDate:day-1 week:week-1];
     }
     
     NSLog(@"现在是:%ld年%ld月%ld日 %ld时%ld分%ld秒  %@",(long)year,(long)month,(long)day,(long)hour,(long)min,(long)sec,weekStr);
-    NSLog(@"现在是:%ld/%ld/%ld",(long)year,(long)month,(long)day);
+//    NSLog(@"现在是:%ld/%ld/%ld",(long)year,(long)month,(long)day);
     return[NSString stringWithFormat:@"%ld/%ld/%ld",(long)year,(long)month,(long)day];
 }
 
@@ -130,6 +138,8 @@
 {
     [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
 }
+
+//取出，除周六，周天以外的时间 ，但是如果，当天的数据没有，自动加载前一天的数据
 - (void)requestData
 {
     __weak __typeof (self)weakSelf = self;
