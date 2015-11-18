@@ -133,7 +133,7 @@
 - (void)requestData
 {
     __weak __typeof (self)weakSelf = self;
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@",KURLPrefix,KInter_day,@"2015/08/07"];
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@",KURLPrefix,KInter_day,@"2015/11/18"];
     
     [AFNTool getWithURL:url params:nil success:^(id json) {
         [weakSelf stopFresh];

@@ -48,6 +48,7 @@
         weakSelf.isRefreshing = YES;
         [weakSelf requestData];
     }];
+    [self.tableView.mj_header beginRefreshing];
     
     //2：尾部刷新
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
