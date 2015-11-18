@@ -39,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evd-AW-RDX">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evd-AW-RDX">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoQ-fV-lfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="496"/>
+            <point key="canvasLocation" x="1314" y="375"/>
         </scene>
         <!--干货-->
         <scene sceneID="wnc-Wt-4wB">
@@ -96,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eid-h4-gI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="496"/>
+            <point key="canvasLocation" x="855" y="375"/>
         </scene>
         <!--设置-->
         <scene sceneID="cHy-Gh-2Vx">
@@ -387,13 +387,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dS-aT-8nT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279" y="1144"/>
+            <point key="canvasLocation" x="174" y="1144"/>
         </scene>
         <!--设置-->
         <scene sceneID="b83-Ff-vIN">
             <objects>
-                <navigationController id="ugk-9q-c3J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设置" id="VZY-hX-APx"/>
+                <navigationController id="ugk-9q-c3J" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="设置" image="tabbar_setting" id="VZY-hX-APx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EYU-Q6-w2I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -410,8 +410,8 @@
         <!--干货-->
         <scene sceneID="slg-4q-QSc">
             <objects>
-                <navigationController id="Wrj-hK-9kb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="干货" id="7Vq-Cp-97N"/>
+                <navigationController id="Wrj-hK-9kb" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="干货" image="tabbar_gank" id="7Vq-Cp-97N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gar-3N-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -470,12 +470,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ox-vy-bEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="462"/>
+            <point key="canvasLocation" x="248" y="462"/>
         </scene>
         <!--每日干货-->
         <scene sceneID="K0v-1G-zKL">
             <objects>
-                <navigationController id="zUB-Cb-Gx8" sceneMemberID="viewController">
+                <navigationController id="zUB-Cb-Gx8" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="每日干货" id="DE8-BS-d0V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v27-mO-NmH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -525,7 +525,7 @@
         <!--妹纸-->
         <scene sceneID="iVv-m0-3dD">
             <objects>
-                <navigationController id="JWd-MA-3WU" sceneMemberID="viewController">
+                <navigationController id="JWd-MA-3WU" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="妹纸" id="56h-mX-Lkc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tf7-9I-6S9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -563,5 +563,7 @@
     </scenes>
     <resources>
         <image name="but_list_right" width="10" height="20"/>
+        <image name="tabbar_gank" width="30" height="30"/>
+        <image name="tabbar_setting" width="30" height="30"/>
     </resources>
 </document>

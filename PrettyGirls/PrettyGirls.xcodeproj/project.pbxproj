@@ -57,6 +57,7 @@
 		FE1165C21BF8DD2900094591 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165BC1BF8DD2900094591 /* FMResultSet.m */; };
 		FE1165C41BF8DFED00094591 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1165C31BF8DFED00094591 /* libsqlite3.tbd */; };
 		FE1165C91BFA388600094591 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1165C81BFA388600094591 /* SettingViewController.m */; };
+		FE1F8C481BFCE5610081248C /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F8C471BFCE5610081248C /* BaseNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,8 @@
 		FE1165C31BF8DFED00094591 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FE1165C71BFA388600094591 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		FE1165C81BFA388600094591 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		FE1F8C461BFCE5610081248C /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		FE1F8C471BFCE5610081248C /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +306,7 @@
 		FE11652A1BF84C4500094591 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FE1F8C451BFCE54B0081248C /* Base */,
 				FE11652B1BF84C4500094591 /* Controller */,
 				FE11652C1BF84C4500094591 /* Model */,
 				FE11652D1BF84C4500094591 /* View */,
@@ -653,6 +657,15 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
+		FE1F8C451BFCE54B0081248C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FE1F8C461BFCE5610081248C /* BaseNavigationController.h */,
+				FE1F8C471BFCE5610081248C /* BaseNavigationController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -826,6 +839,7 @@
 				FE1165A11BF8CC4C00094591 /* TFCycleScrollModel.m in Sources */,
 				FE1165C91BFA388600094591 /* SettingViewController.m in Sources */,
 				FE1165761BF85DEE00094591 /* GirlsController.m in Sources */,
+				FE1F8C481BFCE5610081248C /* BaseNavigationController.m in Sources */,
 				FE1165591BF84C4500094591 /* UIImage+Tint.m in Sources */,
 				FE1165501BF84C4500094591 /* Global.m in Sources */,
 				FE1165551BF84C4500094591 /* SVProgressHUD.m in Sources */,
