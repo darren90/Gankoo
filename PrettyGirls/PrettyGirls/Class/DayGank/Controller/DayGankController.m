@@ -178,7 +178,6 @@
 }
 
 #pragma mark - Table view data source
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.dataArray.count;
@@ -188,6 +187,8 @@
     DayModel *model = self.dataArray[section];
     return model.dataList.count;
 }
+
+
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {

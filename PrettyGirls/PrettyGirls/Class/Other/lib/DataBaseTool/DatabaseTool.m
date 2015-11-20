@@ -65,7 +65,6 @@ static FMDatabase *_db;
     int count = [_db intForQuery:@"SELECT COUNT(url) FROM PrettyGirls where url = ?;",model.url];
     
     if (count >= 1) {
-        NSLog(@"-已经在下载列表中--");
         return NO;
     }
     //2:存储
