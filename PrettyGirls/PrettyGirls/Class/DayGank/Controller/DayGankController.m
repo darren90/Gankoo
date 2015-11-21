@@ -144,6 +144,7 @@
     
 }
 
+
 -(void)successTidyData:(NSDictionary *)json
 {
     BOOL isExist = [json.allKeys containsObject:@"福利"];
