@@ -52,7 +52,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1 && indexPath.row == 0) {//清理缓存
+    if (indexPath.section == 0 && indexPath.row == 0) {//清理缓存
         NSString * path = [WdCleanCaches CachesDirectory];
         [HUDTools showSuccess:[NSString stringWithFormat:@"清理了%.1fMB的缓存",self.cacheSize]];
         [WdCleanCaches clearCachesWithFilePath:path];
@@ -62,11 +62,11 @@
         self.CacheLabel.text = [NSString stringWithFormat:@"%.1fMB",self.cacheSize];
         
 //        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }else if(indexPath.section == 2 && indexPath.row == 0){//APPStore评论
+    }else if(indexPath.section == 1 && indexPath.row == 0){//APPStore评论
         NSString *str = [NSString stringWithFormat:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=%@&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8",KAppid];
            
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
-    }else if(indexPath.section == 2 && indexPath.row == 1){//意见反馈
+    }else if(indexPath.section == 1 && indexPath.row == 1){//意见反馈
         NSString *stringURL = @"mailto:fengtenfei90@163.com";
         NSURL *url = [NSURL URLWithString:stringURL];
         [[UIApplication sharedApplication] openURL:url];
