@@ -20,29 +20,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PrettyGirls/Class/DayGank/Controller/DayGankController.m"
-            timestampString = "469782639.080755"
+            timestampString = "469783560.256013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "-getDateStrWithindex:"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "-requestDataWithIndex:"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrettyGirls/Class/DayGank/Controller/DayGankController.m"
-            timestampString = "469782694.91088"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-getDateStrWithindex:"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DayGankController requestDataWithIndex:]"
+                  moduleName = "PrettyGirls"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tengfei/github/PrettyGirls/PrettyGirls/PrettyGirls/Class/DayGank/Controller/DayGankController.m"
+                  timestampString = "469783562.677905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[DayGankController requestDataWithIndex:]_block_invoke"
+                  moduleName = "PrettyGirls"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tengfei/github/PrettyGirls/PrettyGirls/PrettyGirls/Class/DayGank/Controller/DayGankController.m"
+                  timestampString = "469783562.67825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

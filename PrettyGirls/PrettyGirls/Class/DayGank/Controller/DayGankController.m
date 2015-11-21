@@ -106,7 +106,7 @@
         NSLog(@"error!");
     }
     // 获取从当前时间开始，3天之前的日期
-    NSDate* newDate = [[NSDate alloc] initWithTimeIntervalSinceNow: -index*3600*24];
+    NSDate* newDate = [[NSDate alloc] initWithTimeIntervalSinceNow: +index*3600*24];
     NSString *str = [self timeStrWithDate:newDate];
     
 //    NSLog(@"现在是:%ld年%ld月%ld日 %ld时%ld分%ld秒  %@",(long)year,(long)month,(long)day,(long)hour,(long)min,(long)sec,weekStr);
