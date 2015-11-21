@@ -411,7 +411,7 @@
         <scene sceneID="slg-4q-QSc">
             <objects>
                 <navigationController id="Wrj-hK-9kb" customClass="BaseNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="干货" image="tabbar_gank" id="7Vq-Cp-97N"/>
+                    <tabBarItem key="tabBarItem" title="干货" image="gather" id="7Vq-Cp-97N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gar-3N-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -476,7 +476,7 @@
         <scene sceneID="K0v-1G-zKL">
             <objects>
                 <navigationController id="zUB-Cb-Gx8" customClass="BaseNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="每日干货" id="DE8-BS-d0V"/>
+                    <tabBarItem key="tabBarItem" title="每日干货" image="dayGank" id="DE8-BS-d0V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v27-mO-NmH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -526,7 +526,7 @@
         <scene sceneID="iVv-m0-3dD">
             <objects>
                 <navigationController id="JWd-MA-3WU" customClass="BaseNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="妹纸" id="56h-mX-Lkc"/>
+                    <tabBarItem key="tabBarItem" title="妹纸" image="tabbar_gank" id="56h-mX-Lkc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tf7-9I-6S9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -563,6 +563,8 @@
     </scenes>
     <resources>
         <image name="but_list_right" width="10" height="20"/>
+        <image name="dayGank" width="30" height="30"/>
+        <image name="gather" width="30" height="30"/>
         <image name="tabbar_gank" width="30" height="30"/>
         <image name="tabbar_setting" width="30" height="30"/>
     </resources>
