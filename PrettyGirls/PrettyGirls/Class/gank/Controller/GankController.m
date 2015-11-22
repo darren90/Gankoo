@@ -33,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.rowHeight = 80;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
     UIGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(scrollToTop)];
     [self.navigationController.navigationBar addGestureRecognizer:tap];
@@ -97,7 +98,6 @@
     return self.dataArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GankCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GankCell"];
     if(cell == nil){
@@ -113,14 +113,6 @@
     GankDetailController *detailVc = [sb instantiateViewControllerWithIdentifier:@"GankDetail"];
     detailVc.model = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:detailVc animated:YES];
-    
-    
-//    TFPictureBrowser *browser = [[TFPictureBrowser alloc]init];
-//    NSMutableArray *pics = [NSMutableArray array];
-//    for (MainModel *model in self.dataArray) {
-//        [pics addObject:model.url];
-//    }
-//    [browser showWithPictureURLs:pics atIndex:indexPath.row];
 }
 
 
