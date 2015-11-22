@@ -36,8 +36,14 @@
     if ([self.model.type isEqualToString:@"休息视频"]) {
         [self initNotice];//加载视频横屏的通知
     }
+    
+    self.navigationItem.leftBarButtonItem= [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_back_me_h"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
 }
-
+-(void)back
+{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];;
+}
 
 #pragma mark - 刷新 页面
 -(void)refreshWebView

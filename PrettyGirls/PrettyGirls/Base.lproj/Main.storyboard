@@ -39,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evd-AW-RDX">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evd-AW-RDX">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoQ-fV-lfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="375"/>
+            <point key="canvasLocation" x="1292" y="462"/>
         </scene>
         <!--干货-->
         <scene sceneID="wnc-Wt-4wB">
@@ -74,7 +74,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ePH-A4-lmT">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ePH-A4-lmT" id="sob-7a-SHV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -89,14 +89,16 @@
                             <outlet property="delegate" destination="tLe-US-khO" id="dKg-O5-uTk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="干货" id="mV5-PX-ul7"/>
+                    <navigationItem key="navigationItem" title="干货" id="mV5-PX-ul7">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="OO4-pj-YFF"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="FeN-ma-Iru" kind="push" identifier="gankDe" id="HGH-ZY-lNx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eid-h4-gI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855" y="375"/>
+            <point key="canvasLocation" x="833" y="462"/>
         </scene>
         <!--设置-->
         <scene sceneID="cHy-Gh-2Vx">
@@ -171,7 +173,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="but_list_right" translatesAutoresizingMaskIntoConstraints="NO" id="d6W-8h-a0l">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="but_list_right" translatesAutoresizingMaskIntoConstraints="NO" id="d6W-8h-a0l">
                                                     <rect key="frame" x="282" y="8" width="20" height="27.5"/>
                                                     <animations/>
                                                     <constraints>
@@ -209,7 +211,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="but_list_right" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-0L-QOC">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="but_list_right" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-0L-QOC">
                                                     <rect key="frame" x="282" y="8" width="20" height="27.5"/>
                                                     <animations/>
                                                     <constraints>
@@ -432,11 +434,12 @@
                     <connections>
                         <outlet property="mainScrollview" destination="96A-zI-rwS" id="qpe-4l-6lw"/>
                         <outlet property="topScrollView" destination="ZfH-sd-97k" id="mLR-ZC-NoH"/>
+                        <segue destination="tLe-US-khO" kind="push" id="HnT-aV-yu3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ox-vy-bEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="462"/>
+            <point key="canvasLocation" x="274" y="470"/>
         </scene>
         <!--每日干货-->
         <scene sceneID="K0v-1G-zKL">

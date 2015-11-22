@@ -55,7 +55,6 @@
         self.page ++;
         [weakSelf requestData];
     }];
-
 }
 
 - (void)scrollToTop
