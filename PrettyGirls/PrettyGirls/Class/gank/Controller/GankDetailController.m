@@ -23,6 +23,8 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:@"干货-详情页面"];
+    
+    [HUDTools hideLoading];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
