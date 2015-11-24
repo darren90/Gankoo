@@ -60,7 +60,6 @@
     
     //出去navbar上面的细线
     [appeance setShadowImage:[UIImage new]];
-    //    self.backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 
