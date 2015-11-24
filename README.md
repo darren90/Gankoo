@@ -1,6 +1,7 @@
 爱干货 
 ==========
 
+每日提供技术干货的App。
 ---
 
 API from gank.io: http://gank.io/api.
