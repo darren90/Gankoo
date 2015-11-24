@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @protocol CycleScrollViewDelegate <NSObject>
 
 @optional
