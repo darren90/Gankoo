@@ -33,7 +33,7 @@
     
     //1:version
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    self.VersionLabel.text = [NSString stringWithFormat:@"V:%@",version];
+    self.VersionLabel.text = [NSString stringWithFormat:@"V%@",version];
     
     //2:cacheSize
     NSString * path = [WdCleanCaches CachesDirectory];
